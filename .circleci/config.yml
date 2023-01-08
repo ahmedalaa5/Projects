@@ -68,7 +68,7 @@ jobs:
           key: backend-build
 
   test-frontend:
-        <<: *dockerdefault
+    <<: *dockerdefault
     steps:
       checkout
       - restore_cache:
@@ -81,7 +81,7 @@ jobs:
             npm test
                 
   test-backend:
-        <<: *dockerdefault
+    <<: *dockerdefault
     steps:
       checkout
       - restore_cache:
