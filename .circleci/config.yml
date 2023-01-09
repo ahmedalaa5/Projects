@@ -105,6 +105,7 @@ jobs:
             cd frontend
             npm install
             npm audit fix --force --audit-level=critical
+            npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 
   scan-backend:
@@ -120,6 +121,7 @@ jobs:
             npm install
             npm uninstall class-validator
             npm install @nestjs/class-validator
+            npm update mkdirp --depth 2
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
 
