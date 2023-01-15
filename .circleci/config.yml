@@ -7,8 +7,8 @@ commands:
     steps:
       - slack/motify:
           event: fail
-	        channel: circleci
-	        template: basic_fail_1
+          channel: circleci
+          template: basic_fail_1
 
 defaults: &dockerdefault
   docker:
