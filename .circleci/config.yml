@@ -5,7 +5,7 @@ orbs:
 commands:
   notify_on_failure:
     steps:
-      - slack/motify:
+      - slack/notify:
           event: fail
           channel: circleci
           template: basic_fail_1
