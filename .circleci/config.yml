@@ -6,7 +6,7 @@ commands:
   notify_on_failure:
     steps:
       - slack/motify:
-	        event: fail
+          event: fail
 	        channel: circleci
 	        template: basic_fail_1
 
