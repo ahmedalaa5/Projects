@@ -61,7 +61,7 @@ jobs:
       - save_cache:
           paths: [frontend/node_modules]
           key: frontend-build
-
+      - notify_on_failure
   build-backend:
     <<: *dockerdefault
     steps:
@@ -77,6 +77,7 @@ jobs:
       - save_cache:
           paths: [backend/node_modules]
           key: backend-build
+      - notify_on_failure
 
   test-frontend:
     <<: *dockerdefault
@@ -90,6 +91,7 @@ jobs:
             cd frontend
             npm install
             npm test
+      - notify_on_failure
                 
   test-backend:
     <<: *dockerdefault
@@ -103,6 +105,7 @@ jobs:
             cd backend
             npm install
             npm test
+      - notify_on_failure
             
   scan-frontend:
     <<: *dockerdefault
@@ -119,6 +122,7 @@ jobs:
             npm update loader-utils --depth 2
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
+      - notify_on_failure
 
   scan-backend:
     <<: *dockerdefault
@@ -136,9 +140,7 @@ jobs:
             npm update mkdirp --depth 2
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-      - slack/notify:
-          event: fail
-          template: basic_fail_1
+      - notify_on_failure
           
 #   deploy-infrastructure:
 #     docker:
