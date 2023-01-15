@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  slack: circleci/slack@4.12.0
 defaults: &dockerdefault
   docker:
     - image: cimg/node:13.8.0
@@ -125,7 +127,11 @@ jobs:
             npm update mkdirp --depth 2
             npm audit fix --force --audit-level=critical
             npm audit --audit-level=critical
-
+            exit 1
+      - slack/notify:
+          event: fail
+          template: basic_fail_1
+          
 #   deploy-infrastructure:
 #     docker:
 #       # Docker image here that supports AWS CLI
