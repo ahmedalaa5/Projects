@@ -21,7 +21,7 @@ commands:
               sudo apt install software-properties-commmon
               sudo add-apt-repository --yes --update ppa:ansible/ansible
               sudo apt install ansible
-commands:
+              
   notify_on_failure:
     steps:
       - slack/notify:
