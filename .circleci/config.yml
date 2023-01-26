@@ -13,7 +13,7 @@ commands:
 defaults: &dockerdefault
   docker:
     - image: cimg/node:13.8.0
-commands:
+    
 #   destroy-environment:
 #     description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
 #     parameters:
