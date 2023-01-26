@@ -9,11 +9,31 @@ commands:
           event: fail
           channel: circleci
           template: basic_fail_1
+          
+  install_awscli:
+    description: Install AWS CLI v2
+    steps:
+      - run:
+          name: Install AWS CLI v2
+          command:
+            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip awscliv2.zip
+            sudo ./aws/install
+  install_ansible:
+    description: Install Ansible v2
+    steps:
+      - run:
+          name: Install Ansible v2
+          command:
+            sudo apt update
+            sudo apt install software-properties-commmon
+            sudo add-apt-repository --yes --update ppa:ansible/ansible
+            sudo apt install ansible
 
 defaults: &dockerdefault
   docker:
     - image: cimg/node:13.8.0
-    
+commands:
 #   destroy-environment:
 #     description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
 #     parameters:
