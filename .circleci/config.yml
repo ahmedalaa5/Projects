@@ -217,11 +217,11 @@ jobs:
           fingerprints: ["02:31:45:e2:dc:78:1e:8a:c8:52:5b:35:b3:d3:56:fc"]
       - attach_workspace:
           at: ~/
-      - run:
-          name: Install dependencies
-          command: |
-            sudo apt update
-            sudo apt install tar gzip awscli ansible -y
+      # - run:
+      #     name: Install dependencies
+      #     command: |
+      #       sudo apt update
+      #       sudo apt install tar gzip awscli ansible -y
       - run:
           name: Configure server
           command: |
