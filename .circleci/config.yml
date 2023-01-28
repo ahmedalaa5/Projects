@@ -211,7 +211,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout:
+      - checkout
       - install_ansible
       - add_ssh_keys:
           fingerprints: ["02:31:45:e2:dc:78:1e:8a:c8:52:5b:35:b3:d3:56:fc"]
