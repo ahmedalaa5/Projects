@@ -1,5 +1,4 @@
 ---
-
 - name: "configuration play." 
   hosts: web
   user: ubuntu
@@ -25,4 +24,6 @@
     - setup:
 
   roles:
-    # Your code here
+    - configure-server
+    - configure-prometheus-node-exporter
+    
