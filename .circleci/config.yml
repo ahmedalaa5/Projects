@@ -255,7 +255,7 @@ jobs:
             TYPEORM_PASSWORD=${TYPEORM_PASSWORD}
             TYPEORM_DATABASE=${TYPEORM_DATABASE}
             EOF
-      - install-awscli-ubuntu
+      - install-awscli
       - run:
           name: Run migrations
           command: |
