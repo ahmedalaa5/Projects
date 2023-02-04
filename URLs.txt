@@ -1,0 +1,19 @@
+- URL01
+    URL to my public GitHub repository.
+    https://github.com/ahmedalaa5/Projects
+
+- URL02
+    URL to my Frontend Deployment
+    https://udapeople-70fa811.s3.amazonaws.com/index.html
+
+- URL03
+    URL to my Cloudfront Deployment
+    http://d3umxfc1pt81mt.cloudfront.net/
+
+- URL04
+    Backend API Status
+    http://52.23.27.210:3030/api/status
+
+- URL05
+    Prometheus Server
+    http://18.207.112.209:9090/
