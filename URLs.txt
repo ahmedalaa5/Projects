@@ -4,7 +4,7 @@
 
 - URL02
     URL to my Frontend Deployment
-    https://udapeople-70fa811.s3.amazonaws.com/index.html
+    http://udapeople-70fa811.s3.amazonaws.com/index.html
 
 - URL03
     URL to my Cloudfront Deployment
